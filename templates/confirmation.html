@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>Booking Confirmed!</h1>
+</header>
+
+<div class="container confirmation">
+    <h2>Booking ID: {{.BookingID}}</h2>
+    <p><strong>Passenger:</strong> {{.Name}}</p>
+    <p><strong>Email:</strong> {{.Email}}</p>
+    <p><strong>Flight:</strong> {{.Flight.Airline}} ({{.Flight.FlightNumber}})</p>
+    <p>{{.Flight.From}} → {{.Flight.To}}</p>
+    <p>Departure: {{.Flight.Departure}}</p>
+    <p>Arrival: {{.Flight.Arrival}}</p>
+    <p>Passengers: {{.Passengers}}</p>
+    <p>Total Price: ${{mul .Flight.Price .Passengers}}</p>
+    <a href="/" class="btn">Book Another Flight</a>
+</div>
+
+<footer>
+    <p>&copy; 2026 Flight Booking System</p>
+</footer>
+</body>
+</html>

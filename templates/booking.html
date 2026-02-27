@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking - {{.Airline}} {{.FlightNumber}}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>Booking Flight: {{.Airline}} ({{.FlightNumber}})</h1>
+</header>
+
+<div class="container">
+    <form action="/booking" method="POST" class="booking-form">
+        <input type="hidden" name="flight_id" value="{{.ID}}">
+        <label>Name</label>
+        <input type="text" name="name" required>
+        <label>Email</label>
+        <input type="email" name="email" required>
+        <label>Passengers</label>
+        <input type="number" name="passengers" min="1" max="10" value="1" required>
+        <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2026 Flight Booking System</p>
+</footer>
+</body>
+</html>

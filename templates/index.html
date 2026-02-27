@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Booking System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+    <h1>Book Your Flight</h1>
+</header>
+
+<div class="container">
+    <form action="/results" method="POST" class="search-form">
+        <input type="text" name="from" placeholder="From" required>
+        <input type="text" name="to" placeholder="To" required>
+        <input type="date" name="departure" required>
+        <button type="submit" class="btn">Search Flights</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2026 Flight Booking System</p>
+</footer>
+</body>
+</html>
