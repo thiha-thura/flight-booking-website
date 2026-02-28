@@ -46,7 +46,7 @@ This demo app allows users to **search flights, book tickets, and see booking co
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/flight-booking.git
+git clone https://github.com/thiha-thura/flight-booking-website.git
 cd flight-booking
 go run main.go
 http://localhost:8080
